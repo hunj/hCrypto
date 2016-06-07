@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +642,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="hCrypto" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -657,25 +658,114 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="zfq-hC-YIT" kind="relationship" relationship="window.shadowedContentViewController" id="jkZ-q8-KHi"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--hCrypto-->
+        <scene sceneID="G7o-rX-nr5">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <tabViewController title="hCrypto" selectedTabViewItemIndex="0" id="zfq-hC-YIT" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="94Z-PS-h98"/>
+                        <tabViewItem identifier="" id="kDo-sh-0JV"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="MXg-b7-33x">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="WnV-fa-bA7" kind="relationship" relationship="tabItems" id="T9U-pW-AL8"/>
+                        <segue destination="orT-5b-mfk" kind="relationship" relationship="tabItems" id="qno-4s-djT"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="oVd-PS-Tmk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="734"/>
+        </scene>
+        <!--Encrypt-->
+        <scene sceneID="w7x-JR-b3U">
+            <objects>
+                <viewController title="Encrypt" id="WnV-fa-bA7" customClass="EncryptViewController" customModule="hCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="1ST-sA-ajM">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nEH-Rb-uHH">
+                                <rect key="frame" x="20" y="20" width="300" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ov4-NZ-8wh"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" usesSingleLineMode="YES" id="1S3-8e-Rji">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GvE-kz-nEM">
+                                <rect key="frame" x="349" y="13" width="87" height="32"/>
+                                <buttonCell key="cell" type="push" title="Encrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="re7-Nq-j8Z">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nEH-Rb-uHH" secondAttribute="bottom" constant="20" id="3RP-MJ-nyx"/>
+                            <constraint firstAttribute="bottom" secondItem="GvE-kz-nEM" secondAttribute="bottom" constant="20" id="WCX-C6-9xY"/>
+                            <constraint firstAttribute="trailing" secondItem="GvE-kz-nEM" secondAttribute="trailing" constant="20" id="XG8-IM-mcY"/>
+                            <constraint firstItem="nEH-Rb-uHH" firstAttribute="leading" secondItem="1ST-sA-ajM" secondAttribute="leading" constant="20" id="fuk-bb-rEh"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="C9B-3x-ELC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="719" y="514"/>
+        </scene>
+        <!--Decrypt-->
+        <scene sceneID="95p-mA-GeM">
+            <objects>
+                <viewController title="Decrypt" id="orT-5b-mfk" sceneMemberID="viewController">
+                    <view key="view" id="2wG-p4-42V">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lFx-y6-W9e">
+                                <rect key="frame" x="20" y="20" width="300" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4UN-r0-rK2"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" usesSingleLineMode="YES" id="dgE-BF-ch2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qMD-3X-nw7">
+                                <rect key="frame" x="347" y="13" width="89" height="32"/>
+                                <buttonCell key="cell" type="push" title="Decrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TD5-F3-arj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qMD-3X-nw7" secondAttribute="bottom" constant="20" id="38z-Ig-92m"/>
+                            <constraint firstAttribute="bottom" secondItem="lFx-y6-W9e" secondAttribute="bottom" constant="20" id="QML-QH-4Q3"/>
+                            <constraint firstItem="lFx-y6-W9e" firstAttribute="leading" secondItem="2wG-p4-42V" secondAttribute="leading" constant="20" id="ceD-ac-hEo"/>
+                            <constraint firstAttribute="trailing" secondItem="qMD-3X-nw7" secondAttribute="trailing" constant="20" id="dKM-bT-q0B"/>
+                            <constraint firstItem="lFx-y6-W9e" firstAttribute="baseline" secondItem="qMD-3X-nw7" secondAttribute="baseline" id="no5-7e-Bxo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="TnW-UW-xxU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="977"/>
         </scene>
     </scenes>
 </document>
