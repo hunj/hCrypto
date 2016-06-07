@@ -14,6 +14,7 @@
 		358F32351D06654E00C5269D /* hCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F32341D06654E00C5269D /* hCryptoTests.swift */; };
 		358F32401D06654E00C5269D /* hCryptoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F323F1D06654E00C5269D /* hCryptoUITests.swift */; };
 		35A7E0331D06A3C700920355 /* hCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7E0321D06A3C700920355 /* hCryptoHelper.swift */; };
+		35A7E03B1D06B8E100920355 /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7E03A1D06B8E100920355 /* DecryptViewController.swift */; };
 		35B1B6831D0667CD009D47BA /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1B6821D0667CD009D47BA /* EncryptViewController.swift */; };
 		35B1B6851D06695F009D47BA /* hCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1B6841D06695F009D47BA /* hCryptor.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		358F323F1D06654E00C5269D /* hCryptoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hCryptoUITests.swift; sourceTree = "<group>"; };
 		358F32411D06654E00C5269D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A7E0321D06A3C700920355 /* hCryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hCryptoHelper.swift; sourceTree = "<group>"; };
+		35A7E03A1D06B8E100920355 /* DecryptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; };
 		35B1B6821D0667CD009D47BA /* EncryptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
 		35B1B6841D06695F009D47BA /* hCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hCryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				358F32281D06654E00C5269D /* Main.storyboard */,
 				358F322B1D06654E00C5269D /* Info.plist */,
 				35B1B6821D0667CD009D47BA /* EncryptViewController.swift */,
+				35A7E03A1D06B8E100920355 /* DecryptViewController.swift */,
 				35B1B6841D06695F009D47BA /* hCryptor.swift */,
 				35A7E0321D06A3C700920355 /* hCryptoHelper.swift */,
 			);
@@ -263,6 +266,7 @@
 			files = (
 				35B1B6851D06695F009D47BA /* hCryptor.swift in Sources */,
 				35A7E0331D06A3C700920355 /* hCryptoHelper.swift in Sources */,
+				35A7E03B1D06B8E100920355 /* DecryptViewController.swift in Sources */,
 				35B1B6831D0667CD009D47BA /* EncryptViewController.swift in Sources */,
 				358F32251D06654E00C5269D /* ViewController.swift in Sources */,
 				358F32231D06654E00C5269D /* AppDelegate.swift in Sources */,

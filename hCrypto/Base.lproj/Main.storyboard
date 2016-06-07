@@ -645,16 +645,16 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="hCrypto" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="56.5" y="-24"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="hCryptor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
+                        <rect key="contentRect" x="100" y="545" width="450" height="360"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -663,7 +663,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="74" y="230"/>
         </scene>
         <!--hCrypto-->
         <scene sceneID="G7o-rX-nr5">
@@ -686,7 +686,7 @@
                 </tabViewController>
                 <customObject id="oVd-PS-Tmk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="734"/>
+            <point key="canvasLocation" x="89" y="755.5"/>
         </scene>
         <!--Encrypt-->
         <scene sceneID="w7x-JR-b3U">
@@ -698,9 +698,6 @@
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nEH-Rb-uHH">
                                 <rect key="frame" x="20" y="20" width="300" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="ov4-NZ-8wh"/>
-                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" usesSingleLineMode="YES" id="1S3-8e-Rji">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -713,15 +710,50 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="encryptButtonPressed:" target="WnV-fa-bA7" id="nYN-7l-avA"/>
+                                </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="228" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZv-Ci-E0u">
+                                <rect key="frame" x="230" y="52" width="200" height="228"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Encrypted Text" drawsBackground="YES" id="cy4-qy-cGk">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="228" translatesAutoresizingMaskIntoConstraints="NO" id="Z6U-ha-Xzh">
+                                <rect key="frame" x="20" y="52" width="200" height="228"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Text to Encrypt" drawsBackground="YES" id="7Ee-sl-YnX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="nEH-Rb-uHH" secondAttribute="bottom" constant="20" id="3RP-MJ-nyx"/>
-                            <constraint firstAttribute="bottom" secondItem="GvE-kz-nEM" secondAttribute="bottom" constant="20" id="WCX-C6-9xY"/>
-                            <constraint firstAttribute="trailing" secondItem="GvE-kz-nEM" secondAttribute="trailing" constant="20" id="XG8-IM-mcY"/>
-                            <constraint firstItem="nEH-Rb-uHH" firstAttribute="leading" secondItem="1ST-sA-ajM" secondAttribute="leading" constant="20" id="fuk-bb-rEh"/>
+                            <constraint firstAttribute="trailing" secondItem="qZv-Ci-E0u" secondAttribute="trailing" constant="20" id="3GI-c0-JRd"/>
+                            <constraint firstItem="Z6U-ha-Xzh" firstAttribute="height" secondItem="qZv-Ci-E0u" secondAttribute="height" id="4Ca-m0-i52"/>
+                            <constraint firstAttribute="trailing" secondItem="GvE-kz-nEM" secondAttribute="trailing" constant="20" id="Mfa-MY-T5k"/>
+                            <constraint firstItem="GvE-kz-nEM" firstAttribute="leading" secondItem="nEH-Rb-uHH" secondAttribute="trailing" constant="35" id="Nkl-s6-iv8"/>
+                            <constraint firstItem="nEH-Rb-uHH" firstAttribute="top" secondItem="qZv-Ci-E0u" secondAttribute="bottom" constant="10" id="PKy-xv-svG"/>
+                            <constraint firstItem="qZv-Ci-E0u" firstAttribute="leading" secondItem="Z6U-ha-Xzh" secondAttribute="trailing" constant="10" id="SWM-lb-HYp"/>
+                            <constraint firstItem="nEH-Rb-uHH" firstAttribute="leading" secondItem="1ST-sA-ajM" secondAttribute="leading" constant="20" id="YWk-Ng-vbr"/>
+                            <constraint firstItem="nEH-Rb-uHH" firstAttribute="top" secondItem="Z6U-ha-Xzh" secondAttribute="bottom" constant="10" id="Zr1-1V-M5H"/>
+                            <constraint firstAttribute="bottom" secondItem="GvE-kz-nEM" secondAttribute="bottom" constant="20" id="eJz-LC-ph8"/>
+                            <constraint firstAttribute="bottom" secondItem="nEH-Rb-uHH" secondAttribute="bottom" constant="20" id="kix-KH-b8F"/>
+                            <constraint firstItem="Z6U-ha-Xzh" firstAttribute="top" secondItem="1ST-sA-ajM" secondAttribute="top" constant="20" id="p3E-Z3-c64"/>
+                            <constraint firstItem="Z6U-ha-Xzh" firstAttribute="leading" secondItem="1ST-sA-ajM" secondAttribute="leading" constant="20" id="xA9-cq-Dyo"/>
+                            <constraint firstItem="Z6U-ha-Xzh" firstAttribute="width" secondItem="qZv-Ci-E0u" secondAttribute="width" id="yL4-LL-PtV"/>
+                            <constraint firstItem="qZv-Ci-E0u" firstAttribute="top" secondItem="1ST-sA-ajM" secondAttribute="top" constant="20" id="zFo-4c-pxA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="Z6U-ha-Xzh" id="gaB-j0-JWa"/>
+                        <outlet property="keyField" destination="nEH-Rb-uHH" id="yaC-g2-oeg"/>
+                        <outlet property="outputTextField" destination="qZv-Ci-E0u" id="OlM-co-wi5"/>
+                        <outlet property="submitButton" destination="GvE-kz-nEM" id="JWy-bb-lvu"/>
+                    </connections>
                 </viewController>
                 <customObject id="C9B-3x-ELC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -730,16 +762,13 @@
         <!--Decrypt-->
         <scene sceneID="95p-mA-GeM">
             <objects>
-                <viewController title="Decrypt" id="orT-5b-mfk" sceneMemberID="viewController">
-                    <view key="view" id="2wG-p4-42V">
+                <viewController title="Decrypt" id="orT-5b-mfk" customClass="DecryptViewController" customModule="hCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="2wG-p4-42V">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lFx-y6-W9e">
                                 <rect key="frame" x="20" y="20" width="300" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="4UN-r0-rK2"/>
-                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" usesSingleLineMode="YES" id="dgE-BF-ch2">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -752,16 +781,50 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="decryptButtonPressed:" target="orT-5b-mfk" id="moj-aG-RPi"/>
+                                </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-Dl-vBE">
+                                <rect key="frame" x="20" y="52" width="200" height="228"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Text to Decrypt" drawsBackground="YES" id="cWU-d1-Y44">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-mz-QXs">
+                                <rect key="frame" x="230" y="52" width="200" height="228"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Decrypted Text" drawsBackground="YES" id="s7g-hg-V6B">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="qMD-3X-nw7" secondAttribute="bottom" constant="20" id="38z-Ig-92m"/>
-                            <constraint firstAttribute="bottom" secondItem="lFx-y6-W9e" secondAttribute="bottom" constant="20" id="QML-QH-4Q3"/>
-                            <constraint firstItem="lFx-y6-W9e" firstAttribute="leading" secondItem="2wG-p4-42V" secondAttribute="leading" constant="20" id="ceD-ac-hEo"/>
-                            <constraint firstAttribute="trailing" secondItem="qMD-3X-nw7" secondAttribute="trailing" constant="20" id="dKM-bT-q0B"/>
-                            <constraint firstItem="lFx-y6-W9e" firstAttribute="baseline" secondItem="qMD-3X-nw7" secondAttribute="baseline" id="no5-7e-Bxo"/>
+                            <constraint firstItem="ugB-Dl-vBE" firstAttribute="top" secondItem="2wG-p4-42V" secondAttribute="top" constant="20" id="2me-we-RyE"/>
+                            <constraint firstItem="ugB-Dl-vBE" firstAttribute="leading" secondItem="2wG-p4-42V" secondAttribute="leading" constant="20" id="5T5-Th-c0c"/>
+                            <constraint firstItem="bCL-mz-QXs" firstAttribute="leading" secondItem="ugB-Dl-vBE" secondAttribute="trailing" constant="10" id="6Jy-6Q-cW3"/>
+                            <constraint firstAttribute="trailing" secondItem="qMD-3X-nw7" secondAttribute="trailing" constant="20" id="CL4-cY-qsf"/>
+                            <constraint firstItem="ugB-Dl-vBE" firstAttribute="height" secondItem="bCL-mz-QXs" secondAttribute="height" id="Gha-fS-v6j"/>
+                            <constraint firstItem="lFx-y6-W9e" firstAttribute="top" secondItem="bCL-mz-QXs" secondAttribute="bottom" constant="10" id="Mwy-gN-wIa"/>
+                            <constraint firstItem="ugB-Dl-vBE" firstAttribute="width" secondItem="bCL-mz-QXs" secondAttribute="width" id="OYk-Hx-jJU"/>
+                            <constraint firstAttribute="bottom" secondItem="lFx-y6-W9e" secondAttribute="bottom" constant="20" id="Rah-ik-lud"/>
+                            <constraint firstAttribute="bottom" secondItem="qMD-3X-nw7" secondAttribute="bottom" constant="20" id="XC4-aS-efu"/>
+                            <constraint firstItem="lFx-y6-W9e" firstAttribute="top" secondItem="ugB-Dl-vBE" secondAttribute="bottom" constant="10" id="fSe-oe-8Xn"/>
+                            <constraint firstItem="bCL-mz-QXs" firstAttribute="top" secondItem="2wG-p4-42V" secondAttribute="top" constant="20" id="k0G-HU-ANJ"/>
+                            <constraint firstItem="lFx-y6-W9e" firstAttribute="leading" secondItem="2wG-p4-42V" secondAttribute="leading" constant="20" id="mSb-yj-Woj"/>
+                            <constraint firstItem="qMD-3X-nw7" firstAttribute="leading" secondItem="lFx-y6-W9e" secondAttribute="trailing" constant="33" id="w91-2l-WXY"/>
+                            <constraint firstAttribute="trailing" secondItem="bCL-mz-QXs" secondAttribute="trailing" constant="20" id="wYe-Vn-079"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="ugB-Dl-vBE" id="2rT-iM-peI"/>
+                        <outlet property="keyField" destination="lFx-y6-W9e" id="XLS-g0-ebM"/>
+                        <outlet property="outputTextField" destination="bCL-mz-QXs" id="WgC-wC-f6Q"/>
+                        <outlet property="submitButton" destination="qMD-3X-nw7" id="3Og-4P-sHU"/>
+                    </connections>
                 </viewController>
                 <customObject id="TnW-UW-xxU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

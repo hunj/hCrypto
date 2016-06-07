@@ -12,6 +12,10 @@ class hCryptor {
 	var key = ""
 	var message = ""
 	
+	init() {
+		key = generateKey()
+	}
+	
 	init(message: String) {
 		key = generateKey()
 		self.message = message
@@ -59,7 +63,6 @@ class hCryptor {
 		
 		return result
 	}
-
 	
 	// MARK: Private functions
 	
