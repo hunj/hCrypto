@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 /// String & Character extension.
 /// http://stackoverflow.com/a/29835826/4927106
@@ -25,4 +26,14 @@ extension Character {
 	var unicodeScalarsValue: UInt32 {
 		return String(self).unicodeScalars.first!.value
 	}
+}
+
+/// Shows a simple popup alert message with [OK] button and given message.
+func showAlert(message: String) {
+	let alertView = NSAlert()
+	alertView.messageText = "Error"
+	alertView.informativeText = message
+	alertView.addButtonWithTitle("OK")
+	alertView.alertStyle = NSAlertStyle.WarningAlertStyle
+	alertView.runModal()
 }

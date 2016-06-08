@@ -21,7 +21,7 @@ class DecryptViewController: NSViewController {
 	
 	@IBAction func decryptButtonPressed(sender: NSButton) {
 		if inputTextField.stringValue == "" || keyField.stringValue == "" {
-			// TODO: pop an alert to user
+			showAlert("Text and Key is required!")
 		} else {
 			let cryptor = hCryptor()
 			let decryptedMessage = cryptor.decrypt(inputTextField.stringValue, key: keyField.stringValue)

@@ -21,7 +21,7 @@ class EncryptViewController: NSViewController {
 	
 	@IBAction func encryptButtonPressed(sender: NSButton) {
 		if inputTextField.stringValue == "" {
-			// TODO: pop an alert to user
+			showAlert("Please enter the message to be decrypted!")
 		} else {
 			let cryptor = hCryptor()
 			let (ciphertext, key) = cryptor.encrypt(inputTextField.stringValue)
@@ -30,5 +30,4 @@ class EncryptViewController: NSViewController {
 		}
 	}
 	
-    
 }
