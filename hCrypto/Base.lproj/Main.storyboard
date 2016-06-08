@@ -763,7 +763,7 @@
         <scene sceneID="95p-mA-GeM">
             <objects>
                 <viewController title="Decrypt" id="orT-5b-mfk" customClass="DecryptViewController" customModule="hCrypto" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="2wG-p4-42V">
+                    <view key="view" id="2wG-p4-42V">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -785,7 +785,7 @@
                                     <action selector="decryptButtonPressed:" target="orT-5b-mfk" id="moj-aG-RPi"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-Dl-vBE">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="228" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-Dl-vBE">
                                 <rect key="frame" x="20" y="52" width="200" height="228"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Text to Decrypt" drawsBackground="YES" id="cWU-d1-Y44">
                                     <font key="font" metaFont="system"/>
@@ -793,7 +793,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-mz-QXs">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="228" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-mz-QXs">
                                 <rect key="frame" x="230" y="52" width="200" height="228"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Decrypted Text" drawsBackground="YES" id="s7g-hg-V6B">
                                     <font key="font" metaFont="system"/>
