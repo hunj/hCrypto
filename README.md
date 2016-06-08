@@ -9,13 +9,16 @@ hCrypto uses either a randomly-generated key or a user-given key to encrypt the 
 # Usage
 
 1. Enter your message to encrypt.
+
 ![Encrypting example](./doc/encrypt_example.gif)
 
 2. Send it to your friend, with the key:
+
 ![Usage example](./doc/usage_example.gif)
 	- Anyone who gets this message, initially, will consider this message as either broken encoding (from Unicode converting and whatnot).
 
 3. Your friend can now decrypt your message, using the key provided to you (using different channel to share key is highly recommended):
+
 ![Decrypting example](./doc/decrypt_example.gif)
 
 # Patch notes
