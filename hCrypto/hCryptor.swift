@@ -16,6 +16,10 @@ class hCryptor {
 		key = generateKey()
 	}
 	
+	init(key: String) {
+		self.key = key
+	}
+	
 	init(message: String) {
 		key = generateKey()
 		self.message = message

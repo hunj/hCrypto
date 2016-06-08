@@ -21,13 +21,21 @@ class EncryptViewController: NSViewController {
 	
 	@IBAction func encryptButtonPressed(sender: NSButton) {
 		if inputTextField.stringValue == "" {
-			showAlert("Please enter the message to be decrypted!")
+			showAlert("Please enter the message to be decrypted.")
 		} else {
-			let cryptor = hCryptor()
-			let (ciphertext, key) = cryptor.encrypt(inputTextField.stringValue)
-			outputTextField.stringValue = ciphertext
-			keyField.stringValue = key
+			if keyField.stringValue == "" {
+				let cryptor = hCryptor()
+				let (ciphertext, key) = cryptor.encrypt(inputTextField.stringValue)
+				outputTextField.stringValue = ciphertext
+				keyField.stringValue = key
+			} else {
+				let cryptor = hCryptor(key: keyField.stringValue)
+				let (ciphertext, _) = cryptor.encrypt(inputTextField.stringValue)
+				outputTextField.stringValue = ciphertext
+			}
 		}
+		
+		
 	}
 	
 }
