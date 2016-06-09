@@ -99,15 +99,6 @@ class hCryptor {
 		return asciiText
 	}
 	
-	/// Deprecated
-	private func translateAsciiToString(text: [UInt32]) -> String {
-		var translatedText = ""
-		for i in 0 ..< text.count {
-			translatedText += String(UnicodeScalar(text[i]))
-		}
-		return translatedText
-	}
-	
 	/**
 	matches the length of given `key` to the length of `text` by reiterating.
 	- Parameters:
